@@ -1,0 +1,65 @@
+header {
+    width: 100%;
+    height: 100vh;
+}
+
+#coverImageContainer {
+    width: 100%;
+    height: 100vh;
+    animation-name: RemoveBlur;
+    animation-duration: 2s;
+    background: url("./cover.jpeg") no-repeat fixed center;
+    background-size: cover;
+    filter: blur(0);
+    -webkit-filter: blur(0);
+
+}
+
+nav {
+    width: 100%;
+    height: 30px;
+    background-color: #000000;
+    position: fixed;
+    z-index: 1;
+}
+
+nav ul {
+    text-align: center;
+    font-size: 25px;
+}
+
+.nav-item {
+    margin-left: 15px;
+    display: inline;
+}
+
+.nav-link {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #f08080;
+    border-bottom: 2px solid #f08080;
+}
+
+header h1 {
+    position: relative;
+    top: 50%;
+    text-align: center;
+    font-size: 50px;
+    color: #f08080;
+
+}
+
+@keyframes RemoveBlur {
+    from {
+        filter: blur(8px);
+        -webkit-filter: blur(8px);
+    }
+    to {
+        filter: blur(0);
+        -webkit-filter: blur(0);
+    }
+}
