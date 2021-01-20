@@ -12,7 +12,6 @@ class Header extends React.Component {
                         if (window.innerWidth > 700) {
                             return  (
                                 <nav>
-
                                     <ul>
                                         <li className="nav-item"><a className="nav-link" href="#about">
                                             <Link activeClass="active" to="about" spy={true} smooth={true} duration={1000}>about</Link>

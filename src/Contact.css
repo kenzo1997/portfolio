@@ -1,18 +1,16 @@
 #contact {
     width: 100%;
-    height: 100vh;
+    height: 94vh;
     background-color: lightcoral;
 }
 
 
 #formContainer {
+    padding-top: 25%;
     width: 75%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+    margin: auto;
 }
+
 
 input, textarea {
     display: block;
@@ -33,14 +31,13 @@ textarea {
     height: 250px;
 }
 
-
 input[type="submit"] {
     background-color: #ffffff;
     cursor: pointer;
 }
 
 input[type="submit"]:hover, input[type="submit"]:focus {
-    background-color: #f08080;
+    background-color: #fa3c3c;
 }
 
 @keyframes shadow {
@@ -51,4 +48,3 @@ input[type="submit"]:hover, input[type="submit"]:focus {
         box-shadow: 10px 10px;
     }
 }
-

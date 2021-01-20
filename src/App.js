@@ -2,6 +2,7 @@
 import React from 'react';
 import {useRef, useLayoutEffect} from 'react';
 
+import './Reset.css';
 
 import Header from './Header'
 import About from "./About";
@@ -19,14 +20,17 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                <Header/>
-                <About/>
-                <Projects/>
-                <Footer/>
+              <Header/>
+              <About/>
+              <Projects/>
+              <Contact/>
+              <Footer/>
             </div>
         )
     }
 }
 
 export default App;
-//  <Contact/>
+/*
+
+*/
