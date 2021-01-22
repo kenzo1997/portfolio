@@ -1,13 +1,14 @@
 #projects {
     width: 100%;
-    height: 106vh;
+    height: 140vh;
 
 }
 
-h2 {
+#projects h2 {
     font-size: 35px;
     text-align: center;
     font-weight: bold;
+    text-decoration: underline;
 }
 
 #projectList {
@@ -32,7 +33,7 @@ h2 {
     height: 250px;
     border-radius: 300px;
     margin: 25% 40px 0 40px;
-    background-image: url("./github.svg");
+    background-image: url("./githubV2.svg");
     background-position: center;
     background-size: cover;
     color: rgba(0, 0, 0, 0);
@@ -44,7 +45,7 @@ h2 {
 .project:hover,
 .project:focus{
     cursor: pointer;
-    background-image: url("./github_repo.png");
+    background-image: url("./githubV3.svg");
     text-align: center;
     vertical-align: middle;
     color: rgba(0, 0, 0, 1);

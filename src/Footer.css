@@ -19,6 +19,6 @@ footer {
     margin-right: 13px;
 }
 
-.icon:hover {
+.icon:hover, .icon:focus {
     fill: #f08080;
 }
