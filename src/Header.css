@@ -25,6 +25,7 @@ nav {
 
 nav ul {
     text-align: center;
+    transform: translateY(25%);
     font-size: 25px;
 }
 

@@ -1,3 +1,4 @@
+//TODO: make mobile friendly
 import React from 'react';
 import Typing from 'react-typing-animation';
 import './About.css';
@@ -19,7 +20,7 @@ class About extends React.Component {
                             minded. I'm always trying to improve myself and learn new things.
                             If you have any further questions then don't hesitate to contact me.
                         </Typing>
-                        <a href='./../../../index.html' download="CV" className="about-button">CV</a>
+                        <a href='' download="CV" className="about-button">CV</a>
                         <a href='' download="resume" className="about-button">resume</a>
                     </p>
 
