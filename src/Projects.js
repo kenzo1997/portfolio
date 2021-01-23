@@ -18,14 +18,14 @@ class Projects extends React.Component {
                     projects: githubProjects
                 });
             })
-            .catch(err => console.log('error'));
+            .catch(err => console.error(err));
     }
 
     componentDidMount() {
       this.getProjects();
     }
 
-
+    //TODO: implement animated svg
     render() {
         return (
             <div id="projects">
