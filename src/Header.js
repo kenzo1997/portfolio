@@ -4,12 +4,13 @@ import {Link} from 'react-scroll'
 
 import './Header.css';
 
+//TODO: maybe create a hamburger nav for mobile version ?
 class Header extends React.Component {
     render() {
         return (
             <header>
                     {(() => {
-                        if (window.innerWidth > 700) {
+                        if (window.innerWidth > 812) {
                             return  (
                                 <nav>
                                     <ul>

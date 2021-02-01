@@ -1,3 +1,5 @@
+//todo: implement animation on scroll
+//todo: refactor code
 //todo: uninstall aos package
 import React from 'react';
 import {useRef, useLayoutEffect} from 'react';
@@ -10,20 +12,14 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
-class App extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
+class App extends React.Component {
     render() {
         console.log(window.scrollY);
         return (
             <div className="App">
               <Header/>
               <About/>
-              <Projects/>
-              <Contact/>
-              <Footer/>
             </div>
         )
     }
@@ -32,4 +28,8 @@ class App extends React.Component {
 export default App;
 /*
 
+
+<Projects/>
+<Contact/>
+<Footer/>
 */

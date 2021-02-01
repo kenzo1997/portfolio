@@ -4,15 +4,13 @@
     background-color: lightcoral;
 }
 
-<<<<<<< HEAD
-=======
+
 h2 {
     font-size: 35px;
     text-align: center;
     font-weight: bold;
 }
 
->>>>>>> 2cab8642312b07b82fbb51d00a7193c6ed5679a5
 #formContainer {
     width: 75%;
     margin: auto;
@@ -55,4 +53,27 @@ input[type="submit"]:hover, input[type="submit"]:focus {
     to {
         box-shadow: 10px 10px;
     }
+}
+
+@media only screen and (max-width: 1100px) {
+  input, textarea {
+      width: 75%;
+  }
+}
+
+@media only screen and (max-width: 820px) {
+  #formContainer {
+      transform: translateY(22%);
+  }
+  
+  input, textarea {
+      width: 95%;
+  }
+}
+
+
+@media only screen and (max-height: 414px) {
+  #contact {
+    height: 194vh;
+  }
 }

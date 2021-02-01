@@ -1,12 +1,8 @@
-//TODO: make mobile friendly
+//TODO: keep working on style and optimize mobile responsiveness and clean up css
 import {Component} from 'react'
 import './Contact.css'
 
 class Contact extends Component {
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         return (
             <div id="contact">

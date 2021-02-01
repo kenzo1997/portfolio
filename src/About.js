@@ -1,4 +1,4 @@
-//TODO: make mobile friendly
+//TODO: imporve style and tweak mobile friendly stuff better
 import React from 'react';
 import Typing from 'react-typing-animation';
 import './About.css';
@@ -10,7 +10,6 @@ class About extends React.Component {
                 <div id="pic">
                     <div></div>
                 </div>
-
                 <div id="text">
                     <h2>ABOUT</h2>
                     <p>
@@ -23,10 +22,7 @@ class About extends React.Component {
                         <a href='' download="CV" className="about-button">CV</a>
                         <a href='' download="resume" className="about-button">resume</a>
                     </p>
-
                 </div>
-
-
             </div>
         )
     }
