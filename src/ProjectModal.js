@@ -2,7 +2,7 @@
 import React from 'react';
 import DOMPurify from 'dompurify';
 
-import "./ProjectModal.css"
+import "./css/ProjectModal.css"
 
 class ProjectModal extends React.Component {
   constructor(props) {

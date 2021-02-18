@@ -4,8 +4,8 @@
 import React from 'react';
 import {useRef, useLayoutEffect} from 'react';
 
-import './Reset.css';
-import './App.css'
+import './css/Reset.css';
+import './css/App.css'
 
 import Header from './Header'
 import About from "./About";

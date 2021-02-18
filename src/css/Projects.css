@@ -23,7 +23,7 @@
     height: 250px;
     border-radius: 300px;
     margin: 25% 10% 0 10%;
-    background-image: url("./githubV2.svg");
+    background-image: url("../img/githubV2.svg");
     background-position: center;
     background-size: cover;
 }
@@ -41,7 +41,7 @@
 .project:hover,
 .project:focus{
     cursor: pointer;
-    background-image: url("./githubV3.svg");
+    background-image: url("../img/githubV3.svg");
 }
 
 @keyframes slideDown {

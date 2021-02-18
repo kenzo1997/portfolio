@@ -10,7 +10,7 @@ header {
     height: 100vh;
     animation-name: RemoveBlur;
     animation-duration: 2s;
-    background: url("./cover.jpeg") no-repeat fixed center;
+    background: url("../img/cover.jpeg") no-repeat fixed center;
     background-size: cover;
     filter: blur(0);
     -webkit-filter: blur(0);

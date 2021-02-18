@@ -2,7 +2,7 @@ import React from 'react';
 import Typing from 'react-typing-animation';
 import {Link} from 'react-scroll'
 
-import './Header.css';
+import './css/Header.css';
 
 //TODO: maybe create a hamburger nav for mobile version ?
 class Header extends React.Component {

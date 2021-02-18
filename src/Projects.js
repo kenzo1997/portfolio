@@ -1,7 +1,7 @@
 //TODO: make mobile friendly
 //TODO setup OAuth for github and find way to cache requests instead of making a request every time
 import React from 'react'
-import './Projects.css';
+import './css/Projects.css';
 
 import ProjectModal from "./ProjectModal"
 

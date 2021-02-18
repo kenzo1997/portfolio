@@ -1,7 +1,7 @@
 //TODO: imporve style and tweak mobile friendly stuff better
 import React from 'react';
 import Typing from 'react-typing-animation';
-import './About.css';
+import './css/About.css';
 
 class About extends React.Component {
   constructor(props) {

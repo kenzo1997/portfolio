@@ -1,6 +1,6 @@
 //TODO: keep working on style and optimize mobile responsiveness and clean up css
 import {Component} from 'react'
-import './Contact.css'
+import './css/Contact.css'
 
 class Contact extends Component {  
   constructor(props) {
