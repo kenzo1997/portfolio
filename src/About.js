@@ -4,13 +4,36 @@ import Typing from 'react-typing-animation';
 import './About.css';
 
 class About extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      textAnime: 'text',
+      picAnim: ""
+    }
+  }
+  
+  
+  listenScrollEvent = e => {
+      const { innerWidth: width, innerHeight: height } = window;
+      if (window.scrollY > height - 200) {
+        this.setState({
+          textAnime: 'text textAnim',
+          picAnim: "picReveal"
+        })
+      }   
+  }
+  
+  componentDidMount() {
+      window.addEventListener('scroll', this.listenScrollEvent)
+  }
+  
     render() {
         return (
             <div id="about">
-                <div id="pic">
-                    <div></div>
+                <div className="pic">
+                    <div class={this.state.picAnim}></div>
                 </div>
-                <div id="text">
+                <div className={this.state.textAnime}>
                     <h2>ABOUT</h2>
                     <p>
                         <Typing speed={5}>

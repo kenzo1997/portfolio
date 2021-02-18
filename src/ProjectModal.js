@@ -13,7 +13,7 @@ class ProjectModal extends React.Component {
   }
   
   componentDidMount() {
-    this.getProjectInfo()
+    //this.getProjectInfo()
   }
   
   //TODO clean up readme and make it more presentable
@@ -21,13 +21,19 @@ class ProjectModal extends React.Component {
     fetch(`https://api.github.com/repositories/${this.props.id}/readme`)
         .then(response => response.json())
         .then(project => {
-            let x = atob(project.content)
-            x = x.substring(0, 5000)
-            x = x.replaceAll('\n', '<p>')  
-            x = x.replaceAll('`<title>`', '')
-            x += " ..."
+            let text = atob(project.content)
+            text = text.substring(0, 2500)
+            text = text.replaceAll('`<title>`', '')
+            text = text.replaceAll('\n', '<p>')
+            
+            /*for( let i of text ) {
+              if(i === '#'){
+                console.log('hey');
+              }
+            }*/
+            
             this.setState({
-              project: x
+              project: text
             })
         })
         .catch(err => console.error(err));
@@ -51,6 +57,7 @@ class ProjectModal extends React.Component {
             <div className="readme" dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(this.state.project, {
                   ALLOWED_TAGS: ["p"],
+                  //ALLOWED_TAGS: ["h1"],
                   ALLOWED_ATTR: ["br"],
                 })
               }}

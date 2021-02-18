@@ -1,16 +1,13 @@
 #projects {
     width: 100%;
-    height: 100vh;
-
+    /*height: 100vh;*/
 }
 
-#projects h2 {
-    font-size: 35px;
-    text-align: center;
-    font-weight: bold;
+.projectList {
+  visibility: hidden;
 }
 
-#projectList {
+.projectList-reveal {
     width: 100%;
     display: grid;
     grid-column-gap:20px;
@@ -23,7 +20,6 @@
 }
 
 .project {
-    /*width: 100%;*/
     height: 250px;
     border-radius: 300px;
     margin: 25% 10% 0 10%;
@@ -33,6 +29,10 @@
 }
 
 .wave {
+  visibility: hidden;
+}
+
+.wave-anim {
     position: relative;
     transform: scale(1, -1) translate(0, 1px);
     animation: rev 0.5s;
@@ -54,8 +54,6 @@
     }
 }
 
-
-
 @keyframes rev {
   from {
     /*transform: scale(60,  -1);*/
@@ -66,28 +64,3 @@
   }
 }
 
-/*----------------*/
-
-/*
-@media only screen and (max-width: 1550px) {
-    #projects {
-        width: 100%;
-        height: 100vh;
-        background-color: white;
-    }
-
-    #projectList {
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto auto auto;
-    }
-
-    .project {
-        height: 100px;
-        width: 100px;
-        border-radius: 150px;
-        margin: 25% 40px 0 40px;
-        box-shadow: 10px 10px;
-    }
-}
-*/

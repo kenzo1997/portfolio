@@ -2,17 +2,41 @@
 import {Component} from 'react'
 import './Contact.css'
 
-class Contact extends Component {
-    render() {
+class Contact extends Component {  
+  constructor(props) {
+      super(props)
+      
+      this.state = {
+        formAnim: "formNonAnime"
+      }
+  }
+  
+  listenScrollEvent = e => {
+      const { innerWidth: width, innerHeight: height } = window;
+      if (window.scrollY > (height*3) - 350) {
+        this.setState({formAnim: 'formAnim'})
+      }   
+  }
+  
+  componentDidMount() {
+      window.addEventListener('scroll', this.listenScrollEvent)
+  }
+  
+  //TODO work on check input funcion
+  checkInput(c) {
+    console.log(c)
+  }
+  
+  render() {
         return (
             <div id="contact">
                 <div id="formContainer">
-                    <form action='' method='post'>
+                    <form action="" method="POST" enctype="multipart/form-data" name="EmailForm">
                         <h2>CONTACT</h2>
-                        <label><input placeholder="e-mail"/></label>
-                        <label><input placeholder="Subject"/></label>
-                        <label><textarea placeholder="Message"></textarea></label>
-                        <input value="Send" type="submit"/>
+                        <label><input placeholder="name" name="name" onBlur={e => this.checkInput(e)} className={this.state.formAnim}/></label>
+                        <label><input placeholder="e-mail" name="mail" onBlur={e => this.checkInput(e)} className={this.state.formAnim}/></label>
+                        <label><textarea placeholder="Message" name="comment" onBlur={e => this.checkInput(e.target.value)} className={this.state.formAnim}></textarea></label>
+                        <input value="Send" type="submit" className={this.state.formAnim}/>
                     </form>
                 </div>
             </div>

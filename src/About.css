@@ -5,22 +5,21 @@
     display: flex;
 }
 
-#text, #pic {
+.text, .pic {
     width: 50%;
 }
 
-#pic div {
-    /*todo: if possible use procent instead of px for width, height and border-radius*/
+
+.picReveal {
     width: 550px;
     height: 550px;
     border-radius: 380px;
     animation: reveal 5s;
     background: url("./profile.png") no-repeat center;
-    /*background-size: cover;*/
 }
 
-/*maybe change div img -> img*/
-#pic  div, div img {
+
+.pic  div, div  img {
     left: 50%;
     position: relative;
     top: 40%;
@@ -29,28 +28,32 @@
 }
 
 
-#text  {
+.text  {
     background-color: #ffffff;
     height: 80%;
     font-size: 30px;
     text-align: center;
-    box-shadow: inset 3px 4px 5px #000000;
-    animation: RevealShadow 1.5s;
-    animation-name: RevealShadow;
+    
 }
 
-#text h2,  p {
+.textAnim {
+  animation: RevealShadow 1.5s;
+  animation-name: RevealShadow;
+  box-shadow: inset 3px 4px 5px #000000;
+}
+
+.text h2,  p {
     position: relative;
     top: 35%;
 }
 
-#text h2 {
+.text h2 {
     animation: revealText 3S;
     opacity: 100%;
 }
 
 
-#text p {
+.text p {
     margin: 2% 0 0 5%;
     line-height: 1.5em;
     width: 90%;
@@ -81,13 +84,8 @@
 }
 
 @keyframes reveal {
-    from {
-        background-image: none;
-        background-color: lightcoral;
-    }
-    to {
-        background-image: url("./profile.png");
-    }
+  from { opacity: 0; }
+  to { opacity: 100%;}
 }
 
 @keyframes revealText {
@@ -96,14 +94,14 @@
 }
 
 /*-------------------------*/
-@media only screen and (max-width: 1500px) {
-  #text, #pic div {
+@media only screen and (max-width: 1200px) {
+  .text, .pic div {
       box-shadow: none;
       animation-name: none;
       background-color: #f08080
   }
 
-  #text, p {
+  .text, p {
       color: white;
       width: 50%;
       height: 80%;
@@ -111,14 +109,19 @@
       margin: auto;
   }
 
-  #pic div {
-      width: 100%;
-      height: 80%;
-      border-radius: 0;
+  .pic-reveal {
+    height: 100%
   }
+
+  .pic div {
+      width: 100%;
+      border-radius: 0;
+      top: 50%
+  }
+
   
-  #text h2,  p {
-    top: 10%
+  .text h2,  p {
+    top: 35%
   }
 
   .about-button {
@@ -128,39 +131,47 @@
 
 /*------------------phones portrait mode-----------------------*/
 @media only screen and (max-width: 812px) {
-    #about {
-        display: block;
-        height: 50vh;
-    }
-
-    #about  div {
-        width: 100%;
-        height: 100%;
-        font-size: 20px;
-        text-align: center;
-    }
-    
-    #pic  div, div  img {
-        top: 40%;
-        height: 100%
-    }
-
-
-    #text, p {
-        color: white;
-        width: 50%;
-        padding-top: 0px;
-        margin: auto;
-    }
-
-    #text p {
-        margin: 3% 0 0 5%;
-        line-height: 30px;
-    }
-    
-    .about-button {
-        font-size: 20px;
-    }
+  #about {
+    display: block;
+    height: 100vh;
+  }
+  
+  #about  div {
+      width: 100%;
+      height: 50%;
+      font-size: 20px;
+      text-align: center;
+  }
+  
+  #about div .picReveal {
+    top: 40%;
+    height: 80%;
+}
+  
+  .pic  div, div  img {
+      top: 0;
+      height: 100%;
+      border-radius: 0;
+  }
+  
+  .text h2,  p {
+    top: 0
+  }
+  
+  .text, p {
+      width: 50%;
+      padding-top: 0px;
+      margin: auto;
+  }
+  
+  .text p {
+      margin: 3% 0 0 5%;
+      line-height: 30px;
+  }
+  
+  .about-button {
+      font-size: 20px;
+  }
 }
 
 

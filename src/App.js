@@ -5,6 +5,7 @@ import React from 'react';
 import {useRef, useLayoutEffect} from 'react';
 
 import './Reset.css';
+import './App.css'
 
 import Header from './Header'
 import About from "./About";
@@ -15,21 +16,17 @@ import Footer from "./Footer";
 
 class App extends React.Component {
     render() {
-        console.log(window.scrollY);
         return (
             <div className="App">
               <Header/>
               <About/>
+              <Projects/>
+              <Contact/>
+              <Footer/>
             </div>
         )
     }
 }
 
 export default App;
-/*
 
-
-<Projects/>
-<Contact/>
-<Footer/>
-*/
