@@ -1,6 +1,7 @@
 //Imporve style and make mobile friendly
 import React from 'react';
 import DOMPurify from 'dompurify';
+import marked from "marked";
 
 import "./css/ProjectModal.css"
 
@@ -13,7 +14,7 @@ class ProjectModal extends React.Component {
   }
   
   componentDidMount() {
-    //this.getProjectInfo()
+    this.getProjectInfo()
   }
   
   //TODO clean up readme and make it more presentable
@@ -22,18 +23,9 @@ class ProjectModal extends React.Component {
         .then(response => response.json())
         .then(project => {
             let text = atob(project.content)
-            text = text.substring(0, 2500)
-            text = text.replaceAll('`<title>`', '')
-            text = text.replaceAll('\n', '<p>')
-            
-            /*for( let i of text ) {
-              if(i === '#'){
-                console.log('hey');
-              }
-            }*/
             
             this.setState({
-              project: text
+              project: marked(text)
             })
         })
         .catch(err => console.error(err));
@@ -41,7 +33,6 @@ class ProjectModal extends React.Component {
   
   render() {
     return (
-      <div>
       <div id="myModal" className="modal">
         <div className="modal-content">
           <div className="modal-header">
@@ -54,15 +45,7 @@ class ProjectModal extends React.Component {
             <p>contributors: </p>
             <p></p>
             <h1></h1>
-            <div className="readme" dangerouslySetInnerHTML={{
-                  __html: DOMPurify.sanitize(this.state.project, {
-                  ALLOWED_TAGS: ["p"],
-                  //ALLOWED_TAGS: ["h1"],
-                  ALLOWED_ATTR: ["br"],
-                })
-              }}
-            />
-          </div>
+            <div className="readme" dangerouslySetInnerHTML={{__html: this.state.project}}></div>
           <div className="modal-footer">
             <h3>created at: {this.props.args.startDate}</h3>
           </div>
@@ -72,6 +55,5 @@ class ProjectModal extends React.Component {
     )
   }
 }
-
 
 export default ProjectModal;

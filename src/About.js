@@ -42,8 +42,6 @@ class About extends React.Component {
                             minded. I'm always trying to improve myself and learn new things.
                             If you have any further questions then don't hesitate to contact me.
                         </Typing>
-                        <a href='' download="CV" className="about-button">CV</a>
-                        <a href='' download="resume" className="about-button">resume</a>
                     </p>
                 </div>
             </div>
