@@ -12,7 +12,6 @@ class About extends React.Component {
     }
   }
   
-  
   listenScrollEvent = e => {
       const { innerWidth: width, innerHeight: height } = window;
       if (window.scrollY > height - 200) {

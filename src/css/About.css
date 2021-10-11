@@ -33,7 +33,7 @@
     height: 80%;
     font-size: 30px;
     text-align: center;
-    
+
 }
 
 .textAnim {
@@ -119,7 +119,7 @@
       top: 50%
   }
 
-  
+
   .text h2,  p {
     top: 35%
   }
@@ -135,43 +135,41 @@
     display: block;
     height: 100vh;
   }
-  
+
   #about  div {
       width: 100%;
       height: 50%;
       font-size: 20px;
       text-align: center;
   }
-  
+
   #about div .picReveal {
     top: 40%;
     height: 80%;
 }
-  
+
   .pic  div, div  img {
       top: 0;
       height: 100%;
       border-radius: 0;
   }
-  
+
   .text h2,  p {
     top: 0
   }
-  
+
   .text, p {
       width: 50%;
       padding-top: 0px;
       margin: auto;
   }
-  
+
   .text p {
       margin: 3% 0 0 5%;
       line-height: 30px;
   }
-  
+
   .about-button {
       font-size: 20px;
   }
 }
-
-

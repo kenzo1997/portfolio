@@ -2,7 +2,6 @@
 //todo: refactor code
 //todo: uninstall aos package
 import React from 'react';
-import {useRef, useLayoutEffect} from 'react';
 
 import './css/Reset.css';
 import './css/App.css'
@@ -29,4 +28,3 @@ class App extends React.Component {
 }
 
 export default App;
-

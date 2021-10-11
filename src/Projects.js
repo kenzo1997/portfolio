@@ -17,7 +17,7 @@ class Projects extends React.Component {
             waveAnim: "wave"
         }
     }
-    
+
     listenScrollEvent = e => {
         const { innerWidth: width, innerHeight: height } = window;
         if (window.scrollY > (height*2) - 250) {
@@ -25,23 +25,22 @@ class Projects extends React.Component {
             projectListStyle: "projectList-reveal",
             waveAnim: "wave-anim"
           })
-        }   
+        }
     }
 
     componentDidMount() {
         this.getProjects();
         window.addEventListener('scroll', this.listenScrollEvent)
     }
-    
+
     close() {
-      console.log('yes')
       this.setState({
         modal: <div></div>
       });
     }
 
     getProjects() {
-        fetch('https://api.github.com/users/KenzoCoenaerts-r0683311/repos')
+        fetch('https://api.github.com/users/kenzo1997/repos')
             .then(response => response.json())
             .then(githubProjects => {
                 this.setState({
@@ -53,10 +52,10 @@ class Projects extends React.Component {
 
     openModal(id, args) {
       console.log(args);
-      
+
       this.setState({
         modal: <ProjectModal action={this.close} id={id} args={args}/>
-      });  
+      });
     }
 
     //TODO; keep working on svg animation
@@ -74,9 +73,9 @@ class Projects extends React.Component {
                       this.state.projects.map(project => {
                           //console.table(project);
                           return (
-                              <a key={project.id} onClick={() => this.openModal(project.id, {"startDate": project.created_at, 
+                              <a key={project.id} onClick={() => this.openModal(project.id, {"startDate": project.created_at,
                                                                                              "url": project.html_url,
-                                                                                             "name": project.name})} 
+                                                                                             "name": project.name})}
                               ><div className="project"></div></a>
                           );
                       })

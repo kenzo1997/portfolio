@@ -30,7 +30,7 @@ class Header extends React.Component {
                         return null
                         })()}
                         <div id="coverImageContainer">
-                            <h1 id="title"><Typing>...</Typing></h1>
+                            <h1 id="title"><Typing>Web/app/dame dev</Typing></h1>
                         </div>
             </header>
         )
