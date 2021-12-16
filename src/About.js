@@ -32,7 +32,7 @@ class About extends React.Component {
     return (
       <div id="about">
         <div className="pic">
-          <div className={this.state.picAnim}></div>
+          <div className="picReveal"></div>
         </div>
         <div className={this.state.textAnime}>
           <h2>ABOUT</h2>

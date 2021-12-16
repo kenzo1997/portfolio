@@ -14,7 +14,7 @@
     width: 550px;
     height: 550px;
     border-radius: 380px;
-    animation: reveal 5s;
+    /*animation: reveal 5s;*/
     background: url("../img/profile.png") no-repeat center;
 }
 
