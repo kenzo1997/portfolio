@@ -5,6 +5,10 @@
     box-shadow: 0px 0 15px rgba(0, 0, 0, 0.8);
 }
 
+#contact h2 {
+  color: #ffffff
+}
+
 #formContainer {
     width: 75%;
     margin: auto;
@@ -44,10 +48,12 @@ input:focus, textarea:focus {
 input[type="submit"] {
     background-color: #ffffff;
     cursor: pointer;
+    border: 3px solid black;
+    transition: background 0.8s ease-in-out;
 }
 
 input[type="submit"]:hover, input[type="submit"]:focus {
-    background-color: #fa3c3c;
+    background-color: lightcoral;
 }
 
 @keyframes shadow {

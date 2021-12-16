@@ -1,6 +1,3 @@
-//todo: implement animation on scroll
-//todo: refactor code
-//todo: uninstall aos package
 import React from 'react';
 
 import './css/Reset.css';
@@ -12,19 +9,19 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Footer from "./Footer";
 
-
 class App extends React.Component {
-    render() {
-        return (
-            <div className="App">
-              <Header/>
-              <About/>
-              <Projects/>
-              <Contact/>
-              <Footer/>
-            </div>
-        )
-    }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <About />
+        <Projects />
+        <Contact />
+        <Footer />
+      </div>
+    )
+  }
 }
 
 export default App;

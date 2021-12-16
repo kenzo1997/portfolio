@@ -1,0 +1,35 @@
+.projectList {
+  visibility: hidden;
+}
+
+.projectList-reveal {
+    width: 100%;
+    display: grid;
+    grid-column-gap:20px;
+    grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+    position: relative;
+    bottom: 0;
+    z-index: 0;
+    animation-name: slideDown;
+    animation-duration: 3s;
+    margin-bottom: 50px;
+}
+
+#leftArrow {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+#rightArrow {
+
+}
+
+@keyframes slideDown {
+    from {
+        bottom: 1010px;
+        z-index: -1;
+    } to {
+        bottom: 0;
+        z-index: -1;
+    }
+}

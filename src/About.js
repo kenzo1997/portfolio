@@ -11,41 +11,44 @@ class About extends React.Component {
       picAnim: ""
     }
   }
-  
+
   listenScrollEvent = e => {
-      const { innerWidth: width, innerHeight: height } = window;
-      if (window.scrollY > height - 200) {
-        this.setState({
-          textAnime: 'text textAnim',
-          picAnim: "picReveal"
-        })
-      }   
-  }
-  
-  componentDidMount() {
-      window.addEventListener('scroll', this.listenScrollEvent)
-  }
-  
-    render() {
-        return (
-            <div id="about">
-                <div className="pic">
-                    <div class={this.state.picAnim}></div>
-                </div>
-                <div className={this.state.textAnime}>
-                    <h2>ABOUT</h2>
-                    <p>
-                        <Typing speed={5}>
-                            Student applied information technology.
-                            I would describe myself as someone who is ambitious, flexible, and open
-                            minded. I'm always trying to improve myself and learn new things.
-                            If you have any further questions then don't hesitate to contact me.
-                        </Typing>
-                    </p>
-                </div>
-            </div>
-        )
+    const { innerHeight: height, scrollY } = window;
+    if (scrollY > height - 200) {
+      this.setState({
+        textAnime: 'text textAnim',
+        picAnim: "picReveal"
+      })
     }
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.listenScrollEvent)
+  }
+
+  render() {
+    const { innerHeight: height, scrollY } = window;
+
+    return (
+      <div id="about">
+        <div className="pic">
+          <div className={this.state.picAnim}></div>
+        </div>
+        <div className={this.state.textAnime}>
+          <h2>ABOUT</h2>
+          <p>
+            {scrollY > height - 200 ?
+              <Typing speed={0.2}>
+                Hey! My name is Kenzo and I’m a web developer that loves to code.
+                Exploring new stuff and technology is one of my favorite hobbies.
+                I provides services for both the front end and back-end.
+            </Typing>
+              : null}
+          </p>
+        </div>
+      </div>
+    )
+  }
 }
 
 export default About;

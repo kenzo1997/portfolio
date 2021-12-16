@@ -3,56 +3,19 @@
     /*height: 100vh;*/
 }
 
-.projectList {
-  visibility: hidden;
-}
-
-.projectList-reveal {
-    width: 100%;
-    display: grid;
-    grid-column-gap:20px;
-    grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
-    position: relative;
-    bottom: 0;
-    z-index: 0;
-    animation-name: slideDown;
-    animation-duration: 3s;
-    margin-bottom: 50px;
-}
-
-.project {
-    height: 250px;
-    border-radius: 300px;
-    margin: 25% 10% 0 10%;
-    background-image: url("../img/githubV2.svg");
-    background-position: center;
-    background-size: cover;
-}
-
 .wave {
   visibility: hidden;
+  filter: none;
+  -webkit-filter: none;
 }
 
 .wave-anim {
     position: relative;
     transform: scale(1, -1) translate(0, 1px);
     animation: rev 0.5s;
-}
-
-.project:hover,
-.project:focus{
-    cursor: pointer;
-    background-image: url("../img/githubV3.svg");
-}
-
-@keyframes slideDown {
-    from {
-        bottom: 1010px;
-        z-index: -1;
-    } to {
-        bottom: 0;
-        z-index: -1;
-    }
+    -webkit-filter: drop-shadow( -2px -3px 1.7px #454444);
+    filter: drop-shadow( -2px -3px 1.7px #454444);
+    z-index: 0
 }
 
 @keyframes rev {
@@ -64,4 +27,3 @@
     transform: scale(1, -1) translate(0, 1px);
   }
 }
-

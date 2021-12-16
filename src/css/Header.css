@@ -1,5 +1,7 @@
-/*TODO: think about font size*/
-/*TODO: maybe change header, nav, nav ul and header h1. so that they use a class name*/
+@font-face {
+  font-family: myFont;
+  src: url(../assets/AxeonRegular-vmyL4.otf);
+}
 
 header {
     width: 100%;
@@ -50,9 +52,22 @@ header h1 {
     position: relative;
     top: 50%;
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
     color: #f08080;
+    font-family: myFont;
+}
 
+.neonText {
+  color: #f08080;
+  text-shadow:
+      0 0 7px #f08080,
+      0 0 10px #f08080,
+      0 0 21px #f08080,
+      0 0 42px #f08080,
+      0 0 82px #f08080,
+      0 0 92px #f08080,
+      0 0 102px #f08080,
+      0 0 151px #f08080;
 }
 
 @keyframes RemoveBlur {
