@@ -1,6 +1,7 @@
 {
+  "homepage": "http://kenzo1997.github.io/portfolio",
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
@@ -18,7 +19,6 @@
     "react-typing-animation": "^1.6.2",
     "web-vitals": "^0.2.4"
   },
-  "homepage": "https://kenzo1997.github.io/portfolio",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
