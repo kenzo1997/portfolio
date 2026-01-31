@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Kenzo Coenaerts – Neumorphic Dev</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+<div id="app">
+  <div class="container">
+    <header>
+      <div class="logo" style="font-weight: 700; font-size: 1.4rem;">MeZo.</div>
+      <a href="mailto:coenaerts.kenzo@gmail.com" class="neu-button" style="text-decoration: none;">Let's Talk</a>
+    </header>
+
+    <section id="hero" class="neu-inset" style="padding: 60px; margin-top: 40px;">
+      <h1>Kenzo Coenaerts</h1>
+      <p style="font-size: 1.2rem; opacity: 0.8; margin-bottom: 30px;">{{ fullText }}</p>
+      <div style="display: flex; justify-content: center; gap: 20px;">
+        <a href="#projects" class="neu-button" style="text-decoration: none;">My Work</a>
+        <a href="Kenzo_CV.pdf" class="neu-button" style="text-decoration: none; color: var(--accent);">Resume</a>
+      </div>
+    </section>
+
+    <section id="skills" style="margin-top: 80px;">
+      <h2 style="text-align: center;">Core Tech</h2>
+      <div class="skill-grid">
+        <div v-for="skill in skills" :key="skill.name" class="neu-flat skill-card">
+          {{ skill.name }}
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" style="margin-top: 80px;">
+      <h2 style="text-align: center;">Recent Projects</h2>
+      
+      <div v-if="loading" style="text-align: center; margin-top: 40px;">Calibrating shadows...</div>
+      
+      <div class="project-list">
+        <div v-for="project in projects.slice(0, 4)" :key="project.id" class="neu-flat project-card">
+          <h3>{{ project.name }}</h3>
+          <p>{{ project.description || 'Custom software solution built with clean, scalable code architecture.' }}</p>
+          <a :href="project.html_url" target="_blank" class="neu-button" style="text-decoration: none; font-size: 0.8rem; display: inline-block;">View GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="neu-inset" style="padding: 40px;">
+        <h2>Get in touch</h2>
+        <div class="social-links">
+          <a href="https://github.com/kenzo1997" class="neu-button" style="text-decoration: none;">GitHub</a>
+          <a href="https://www.linkedin.com/in/kenzo-coenaerts" class="neu-button" style="text-decoration: none;">LinkedIn</a>
+        </div>
+        <p style="margin-top: 40px; font-size: 0.8rem; opacity: 0.5;">&copy; 2026 Kenzo Coenaerts. Soft UI Edition.</p>
+      </div>
+    </footer>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
