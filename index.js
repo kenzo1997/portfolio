@@ -4,8 +4,8 @@ createApp({
     return {
       fullText: "Full Stack Software Developer & Digital Architect",
       skills: [
-        { name: "Java" }, { name: "PHP" }, { name: "Vue.js" }, 
-        { name: "Spring Boot" }, { name: "JavaScript" }, { name: "SQL" }
+        { name: "Javascript" }, { name: "Python" }, { name: "AI Tools" }, 
+        { name: "Node js" }, { name: "PHP" }, { name: "SQL" }
       ],
       projects: [],
       loading: true
